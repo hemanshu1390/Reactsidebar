@@ -145,6 +145,7 @@ function MSidebar({ isOpen }) {
             />
           }
         >
+          <Link to='/E-c'>
           <ListItem className="p-0" selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
               <ListItemPrefix>
@@ -155,23 +156,34 @@ function MSidebar({ isOpen }) {
               </Typography>
             </AccordionHeader>
           </ListItem>
+          </Link>
+
           <AccordionBody className="py-1">
             <List className="p-0">
+
+          <Link to='/E-c/order'>
               <ListItem>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Orders
               </ListItem>
+              </Link>
+
+         <Link to='/E-c/product'>
               <ListItem>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Products
               </ListItem>
+              </Link>
+
             </List>
           </AccordionBody>
         </Accordion>
+
+        <Link to='/inbox'>
         <ListItem>
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
@@ -181,24 +193,34 @@ function MSidebar({ isOpen }) {
             <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
           </ListItemSuffix>
         </ListItem>
+        </Link>
+
+        <Link to='/profile'>
         <ListItem>
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
           </ListItemPrefix>
           Profile
         </ListItem>
+        </Link>
+
+        <Link to='/s'>
         <ListItem>
           <ListItemPrefix>
             <Cog6ToothIcon className="h-5 w-5" />
           </ListItemPrefix>
-          Settings
-        </ListItem>
-        <ListItem>
+        Settings
+        </ListItem></Link>
+
+        <Link to='/lo'>
+  <ListItem>
           <ListItemPrefix>
             <PowerIcon className="h-5 w-5" />
           </ListItemPrefix>
           Log Out
         </ListItem>
+        </Link>
+
       </List>
     </Card>
   );

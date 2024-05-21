@@ -1,16 +1,17 @@
 {
   "name": "16side",
   "private": true,
-  "homepage": "https://github.com/hemanshu1390/Reactsidebar.git",
+  "homepage": "https://hemanshu1390.github.io/Reactsidebar",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run bluid",
-    "deploy": "gh-pages -d build",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",

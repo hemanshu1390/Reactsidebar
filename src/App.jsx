@@ -8,6 +8,13 @@ import Submi1 from "./components/submenu/submi1";
 import Submi2 from "./components/submenu/submi2";
 import Submenu from "./components/subm";
 import Dashboard from "./components/Dashboard";
+import System from "./components/system";
+import Ecommerce from "./components/EC/E-commerce";
+import Orders from "./components/EC/orders";
+import Inbox from "./components/Inbox";
+import Profile from "./components/Profile";
+import Lo from "./components/Logout";
+import Products from "./components/EC/products";
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -38,14 +45,26 @@ function App() {
                          <Route path="subi2" element={<Submi2/>} />
                    </Route> 
               </Route>
+              <Route path="/E-c" element={<Ecommerce/>} >
+                
+                         <Route path="order" element={<Orders/>} />
+                         <Route path="product" element={<Products/>} />
+               
+              </Route>
               {/* Add more routes as needed */}
-                  {/* <Route path="/reporting" element={<Reporting />} />
-                   <Route path="/projects" element={<Projects />} /> */}
+              <Route path="/profile" element={<Profile />} /> 
+              <Route path="/lo" element={<Lo/>} /> 
+
+                   <Route path="/inbox" element={<Inbox />} /> 
+                   <Route path="/s" element={<System />} /> 
+
             </Routes>
           </div>
         </div>
       </div>
     </>
+
+
   );
 }
 
